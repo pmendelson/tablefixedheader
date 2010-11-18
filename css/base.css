@@ -1,0 +1,196 @@
+/*!
+* jquery.fixheadertable
+*
+* Copyright (c) 2010 Benjamin Léouzon
+* http://www.tablefixedheader.com/
+*
+* Licensed under MIT
+* http://www.opensource.org/licenses/mit-license.php
+*
+* Launch  : September 2010
+* Version : 1.1.1
+*/
+
+/* CALCULATE SCROLLBAR WIDTH */
+
+p.t_fixed_header_scroll_inner {
+	width			: 100%;
+	height			: 200px;
+}
+
+div.t_fixed_header_scroll_outer {
+	top 			: 0;
+	left 			: 0;
+	visibility 		: hidden;
+	width 			: 200px;
+	height 		: 150px;
+	overflow 		: hidden;
+}
+
+/* BASE */
+
+div.t_fixed_header {
+	position		: relative;
+	margin 		: 0; 
+	width			: 100%;
+}
+
+div.t_fixed_header * {
+	position		: relative;
+	margin			: 0;
+	padding		: 0;
+}
+
+div.t_fixed_header table {
+	width			: 100%;
+	table-layout 	: fixed;
+	empty-cells 	: show;
+	border-collapse	: collapse;
+	border-spacing	: 0;
+}
+
+div.t_fixed_header table.headtable td.fillScrollbar {
+	font-size		: 0px;
+	-o-text-overflow: inherit; /* IE TRAFF */
+	text-overflow 	: inherit; /* IE TRAFF */
+}
+
+div.t_fixed_header tr th, div.t_fixed_header tr td {
+	overflow		: hidden;
+	white-space	: nowrap;	
+	-o-text-overflow: ellipsis;
+	text-overflow 	: ellipsis;
+}
+
+div.t_fixed_header.t_fixed_header_wrap tr th, div.t_fixed_header.t_fixed_header_wrap tr td {
+	white-space	: normal;
+}
+
+div.t_fixed_header div.body {
+	padding		: 0;
+	width			: 100%;
+	overflow-x		: hidden;
+}
+
+div.t_fixed_header_main_wrapper {
+	position 		: relative; 
+	overflow 		: hidden; 
+}
+
+div.t_fixed_header_main_wrapper_child {
+	position 		: relative; 
+	overflow-x 		: auto; 
+	overflow-y 		: hidden; 
+	width 			: 100% 
+}
+
+/* BASE THEME : UI */
+
+div.t_fixed_header_main_wrapper.ui {
+	border-width 	: 1px 1px 1px 1px;
+	border-style 	: solid;
+	font-weight	: normal;
+	font-size		: 1.1em;
+}
+
+div.t_fixed_header_main_wrapper.ui  div.t_fixed_header_caption {
+	text-align		: left;
+	font-weight	: bold;
+	padding		: 0 5px;
+	height			: 25px;
+	line-height	: 25px;
+	border-width 	: 0 0 1px 0;
+	border-style 	: solid;
+}
+
+div.t_fixed_header div.headtable {
+	border			: 0;	
+}
+
+div.t_fixed_header.ui .body {
+	border-width 	: 1px 0 0 0;
+	border-style 	: solid;
+	background-image : none;
+}
+
+div.t_fixed_header.ui th {
+	padding		: 5px;
+	text-align 	: center;
+	line-height	: 15px;
+	border-width 	: 0 1px 0 0;
+	border-style 	: solid;
+	color			: inherit;
+	background		: none;
+}
+
+div.t_fixed_header.ui .body td {
+	padding		: 5px;
+	text-align 	: center;
+	line-height	: 15px;
+}
+
+div.t_fixed_header.ui .body tr td {
+	border-width 	: 1px 1px 0 0;
+	border-style 	: solid;
+	background		: none;
+}
+
+div.t_fixed_header.ui .body tr.first_tr td {
+	border-top		: 0px;
+}
+
+div.t_fixed_header.ui .body td.last_td, div.t_fixed_header.ui .headtable th.last_td {
+	border-right-width : 0px;
+}
+
+div.t_fixed_header.ui .body tr.even {
+	background		: #FFFFFF;
+}
+
+div.t_fixed_header.ui .body tr.odd {
+	background		: #EEEEEE;
+}
+
+/* CUSTOMIZE
+
+	use ==>
+	
+	$('tableid').fixheadertable({
+		...
+		theme	: 'ui custo'
+	});
+
+*/
+
+div.t_fixed_header_main_wrapper.ui.custo {
+	border-color	: #E78F08;
+	color 			: #777777;
+}
+
+div.t_fixed_header_main_wrapper.ui.custo  div.t_fixed_header_caption {
+	background		: #ECEDED url(../images/caption_bg_lightness.png) repeat-x center center;
+	border-color	: #E78F08;
+	text-shadow		: 1px 1px 0 #E78F08;
+	color			: #FFFFFF;
+}
+
+div.t_fixed_header.ui.custo div.headtable {
+	background		: #ECEDED url(../images/header_bg_lightness.png) repeat-x center center;
+}
+
+div.t_fixed_header.ui.custo .body {
+	border-color	: #AAAAAA;
+	background		: #FFFFFF;
+}
+
+div.t_fixed_header.ui.custo th {	
+	border-color	: #AAAAAA;
+	text-shadow		: 1px 1px 0 #FFF;
+	color			: #1C94C4;
+}
+
+div.t_fixed_header.ui.custo .body tr td {
+	border-color	: #AAAAAA;
+}
+
+

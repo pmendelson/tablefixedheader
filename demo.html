@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>Full page demo | table fixed header</title>			
+			
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" id="link" href="jquery-ui/css/ui-lightness/jquery-ui-1.8.4.custom.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script type="text/javascript" src="javascript/jquery.fixheadertable.js"></script>		
+		
+		<script type="text/javascript">  
+			
+			$(document).ready(function() {  	
+				
+				$("button").button();
+				$("#lightness").click(function() { $('#link').attr('href', 'jquery-ui/css/ui-lightness/jquery-ui-1.8.4.custom.css'); });
+				$("#hotsneaks").click(function() { $('#link').attr('href', 'jquery-ui/css/hot-sneaks/jquery-ui-1.8.4.custom.css'); });
+				$("#flick").click(function() { $('#link').attr('href', 'jquery-ui/css/flick/jquery-ui-1.8.4.custom.css'); });
+				$("#redmond").click(function() { $('#link').attr('href', 'jquery-ui/css/redmond/jquery-ui-1.8.4.custom.css'); });
+				$("#smoothness").click(function() { $('#link').attr('href', 'jquery-ui/css/smoothness/jquery-ui-1.8.4.custom.css'); });
+				
+				$('#fixmyheader-1').fixheadertable({
+					caption		: 'My header is fixed !',
+					zebra		: true
+				});
+				
+				$('#fixmyheader-2').fixheadertable({
+					caption		: 'My header is fixed !',
+					height		: 200,
+					whiteSpace	: 'normal'
+				});
+				
+				$('#fixmyheader-3').fixheadertable({
+					caption		: 'My header is fixed !',
+					height		: 200
+				});
+				
+				$('#fixmyheader-4').fixheadertable({
+					caption		: 'My header is fixed !',
+					width		: 400,
+					height		: 150
+				});
+				
+				$('#fixmyheader-5').fixheadertable({
+					caption		: 'My header is fixed !',
+					height		: 200,
+					minWidth	: 1500
+				});
+				
+				$('#fixmyheader-6').fixheadertable({
+					caption		: 'My header is fixed !',
+					height		: 200,
+					minWidthAuto: false
+				});
+				
+				$('#fixmyheader-7').fixheadertable({
+					caption		: 'My header is fixed !',
+					height		: 200
+				});
+				
+				$('#fixmyheader-8').fixheadertable({
+					caption		: 'My header is fixed !',
+					height		: 200,
+					addTitles	: true,
+					colratio	: ['10%', '10%', '8%', '50px', 'auto', 'auto', '30%', 'auto']
+				});
+			});
+		</script>		
+		<style type="text/css">		
+			body {
+				font-family : Verdana,Arial,Geneva,Helvetica,sans-serif;
+				font-size	: 10px;
+			}
+			
+			code, pre {				
+				padding		: 10px;	
+				background	: #F5F5F5;
+				border		: 1px solid #D4D4D4;
+				overflow-x	: auto;
+				font-size	: 12px;
+			}			
+		</style>
+	</head>
+	<body style="background-color : #FFFFFF">
+		
+		<div style="background : black; padding : 10px">
+			<img src="http://jqueryui.com/images/logo.gif"/>
+		</div>
+		<br/><br/>
+		
+		A few jquery ui themes : 
+		
+		<button id="lightness">UI-LIGHTNESS</button>
+		<button id="hotsneaks">HOT-SNEAKS</button>
+		<button id="flick">FLICK</button>
+		<button id="redmond">REDMOND</button>
+		<button id="smoothness">SMOOTHNESS</button>
+		<br/><br/>
+<pre>
+$('#fixmyheader-1').fixheadertable({
+	caption : 'My header is fixed !',
+	zebra : true
+});
+</pre>
+		<table id="fixmyheader-1" class="fixmyheader">
+			<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+			<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+				<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+				<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+				<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+				<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+				<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+				<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+				<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+				<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+				<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+		</table>
+<pre>
+$('#fixmyheader-2').fixheadertable({
+	caption		: 'My header is fixed !',
+	height		: 200,
+	whiteSpace	: 'normal'
+});
+
+$('#fixmyheader-3').fixheadertable({
+	caption		: 'My header is fixed !',
+	height		: 200
+});
+</pre>
+	<div style="overflow : hidden">
+		<div style="position : relative; width : 49%; float : left;">
+			<table id="fixmyheader-2" class="fixmyheader">
+				<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+				<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+					<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+			</table>
+		</div>
+		<div style="position : relative; width : 49%; float : right; margin-right : 2px">
+			<table id="fixmyheader-3" class="fixmyheader">
+				<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+				<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+					<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+			</table>
+		</div>
+	</div>		
+
+<pre>
+$('#fixmyheader-4').fixheadertable({
+	caption		: 'My header is fixed !',
+	width		: 400,
+	height		: 150
+});
+</pre>
+		<table id="fixmyheader-4" class="fixmyheader">
+			<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+			<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+				<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+				<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+				<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+				<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+				<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+				<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+				<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+				<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+				<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+		</table>
+
+<pre>
+$('#fixmyheader-5').fixheadertable({
+	caption		: 'My header is fixed !',
+	height		: 200,
+	minWidth	: 1500
+});
+</pre>
+
+		<table id="fixmyheader-5" class="fixmyheader">
+			<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+			<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+				<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+				<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+				<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+				<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+				<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+				<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+				<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+				<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+				<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+		</table>
+
+<pre>
+$('#fixmyheader-6').fixheadertable({
+	caption		 : 'My header is fixed !',
+	height		 : 200,
+	minWidthAuto	 : false
+});
+
+$('#fixmyheader-7').fixheadertable({
+	caption		 : 'My header is fixed !',
+	height		 : 200
+});
+</pre>
+
+		<div style="overflow : hidden">
+		<div style="position : relative; width : 49%; float : left;">
+			<table id="fixmyheader-6" class="fixmyheader">
+				<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+				<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+					<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+			</table>
+		</div>
+		<div style="position : relative; width : 49%; float : right; margin-right : 2px">
+			<table id="fixmyheader-7" class="fixmyheader">
+				<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+				<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+					<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+					<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+					<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+					<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+					<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+			</table>
+		</div>
+	</div>	
+	<br/>
+
+<pre>
+$('#fixmyheader-8').fixheadertable({
+	caption		: 'My header is fixed !',
+	height		: 200,
+	addTitles	: true,
+	colratio	: ['10%', '10%', '8%', '50px', 'auto', 'auto', '30%', 'auto']
+});
+</pre>
+
+	<table id="fixmyheader-8" class="fixmyheader">
+		<thead><tr><th>First Name</th><th>Last Name</th><th>Sexe</th><th>Age</th><th>Total</th><th>Discount</th><th>Difference</th><th>Date</th></tr></thead>
+		<tbody><tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+			<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+			<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+			<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+			<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr>		
+			<tr><td>Bruce</td><td>Almighty</td><td>Male</td><td>45</td><td>$153.19</td><td>44.7%</td><td>+77</td><td>Jan 18, 2001 9:12 AM</td></tr>
+			<tr><td>Bruce</td><td>Evans</td><td>Male</td><td>22</td><td>$13.19</td><td>11%</td><td>-100.9</td><td>Jan 18, 2007 9:12 AM</td></tr>
+			<tr><td>Clark</td><td>Kent</td><td>Male</td><td>18</td><td>$15.89</td><td>44%</td><td>-26</td><td>Jan 12, 2003 11:14 AM</td></tr>
+			<tr><td>John</td><td>Hood</td><td>Male</td><td>33</td><td>$19.99</td><td>25%</td><td>+12</td><td>Dec 10, 2002 5:14 AM</td></tr>
+			<tr><td>Peter</td><td>Parker</td><td>Male</td><td>28</td><td>$9.99</td><td>20.9%</td><td>+12.1</td><td>Jul 6, 2006 8:14 AM</td></tr></tbody>				
+	</table>
